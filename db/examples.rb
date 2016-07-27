@@ -16,3 +16,9 @@
 #                password: 'abc123',
 #                password_confirmation: nil)
 # end
+
+# Question.create([
+#   { title: 'What is the supreme law of the land?', answer: ['the Constitution'] },
+#   { title: 'What does the Constitution do?', answer: ['sets up the government', 'defines the government', 'protects basic rights of Americans']},
+#   { title: 'The idea of self-government is in the first three words of the Constitution. What are these words?', answer: ['We the People'] },
+#   ])
