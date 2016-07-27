@@ -20,7 +20,7 @@ pickle-email-*.html
 config/initializers/secret_token.rb
 
 # TODO: exclude if you have secrets not taken from the environment
- config/secrets.yml
+config/secrets.yml
 
 ## Environment normalization:
 /.bundle
