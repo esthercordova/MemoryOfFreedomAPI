@@ -57,9 +57,8 @@ class UserQuestionsController < OpenReadController
   end
 
   def findQuestionId
-    @question = UserQuestion.select { | question | question if question.user_id.to_s == params[:user_id] and question.question_id.to_s == params[:question_id]}
-
-    render json: @question
+    @row = UserQuestion.select { |question| question if question.user_id.to_s == params[:user_id] and question.question_id.to_s == params[:question_id] }
+    render json: @row
   end
 
   private
