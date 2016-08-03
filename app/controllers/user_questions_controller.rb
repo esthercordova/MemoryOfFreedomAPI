@@ -1,10 +1,19 @@
-class UserQuestionsController < ApplicationController
+class UserQuestionsController < OpenReadController
   before_action :set_user_question, only: [:show, :update, :destroy]
 
   # GET /user_questions
   # GET /user_questions.json
   def index
-    @user_questions = UserQuestion.all
+    @user_questions = UserQuestion.where(user: current_user)
+
+    # if params[:status] == "easy"
+    #   @user_questions = @user_questions.where(status: "easy")
+    # elsif  params[:status] == "medium"
+    #   @user_questions = @user_questions.where(status: "medium")
+    # else
+    #   @user_questions = @user_questions.where(status: "hard")
+    # end
+
 
     render json: @user_questions
   end
@@ -50,7 +59,7 @@ class UserQuestionsController < ApplicationController
   private
 
     def set_user_question
-      @user_question = UserQuestion.find(params[:id])
+      @user_question = UserQuestion.where(user: current_user).find(params[:id])
     end
 
     def user_question_params
