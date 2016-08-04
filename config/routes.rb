@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :profiles, except: [:new, :edit]
   resources :user_questions, except: [:new, :edit]
   resources :questions, except: [:new, :edit]
   resources :examples, except: [:new, :edit]
