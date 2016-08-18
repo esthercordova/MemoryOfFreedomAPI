@@ -14,7 +14,6 @@ class UserQuestionsController < OpenReadController
     #   @user_questions = @user_questions.where(status: "hard")
     # end
 
-
     render json: @user_questions
   end
 
